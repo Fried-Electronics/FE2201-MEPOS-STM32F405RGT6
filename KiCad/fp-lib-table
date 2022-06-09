@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name "MEP_TEMPLATE")(type "KiCad")(uri "${KIPRJMOD}/Libraries/MEP_TEMPLATE.pretty")(options "")(descr ""))
+  (lib (name "FT232RQ")(type "KiCad")(uri "${KIPRJMOD}/Libraries/FT232RQ")(options "")(descr ""))
 )

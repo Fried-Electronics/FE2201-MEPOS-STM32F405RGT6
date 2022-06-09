@@ -53,6 +53,11 @@
           "gap": 0.0,
           "via_gap": 0.0,
           "width": 0.0
+        },
+        {
+          "gap": 0.2032,
+          "via_gap": 0.0,
+          "width": 0.153162
         }
       ],
       "drc_exclusions": [],
@@ -349,7 +354,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "MEPOS_TEMPLATE.kicad_pro",
+    "filename": "STM32F405RGT6.kicad_pro",
     "version": 1
   },
   "net_settings": {
