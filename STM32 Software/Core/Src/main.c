@@ -667,7 +667,7 @@ static void MX_USART1_UART_Init(void)
   huart1.Init.StopBits = UART_STOPBITS_1;
   huart1.Init.Parity = UART_PARITY_NONE;
   huart1.Init.Mode = UART_MODE_TX_RX;
-  huart1.Init.HwFlowCtl = UART_HWCONTROL_RTS_CTS;
+  huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
   huart1.Init.OverSampling = UART_OVERSAMPLING_16;
   if (HAL_UART_Init(&huart1) != HAL_OK)
   {
@@ -765,39 +765,39 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, GPIO10_Pin|GPIO11_Pin|GPIO12_Pin|GPIO15__Pin
-                          |GPIO16__Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, GPIO12_Pin|GPIO13_Pin|GPIO14_Pin|GPIO17__Pin
+                          |GPIO18__Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, GPIO13_Pin|GPIO14_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, GPIO15_Pin|GPIO16_Pin|GPIO6_Pin|GPIO7_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, GPIO17__Pin|GPIO18__Pin|CS2_Pin|GPIO7_Pin
-                          |GPIO8_Pin|GPIO9_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, GPIO19__Pin|GPIO20__Pin|CS2_Pin|GPIO9_Pin
+                          |GPIO10_Pin|GPIO11_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(CS1_GPIO_Port, CS1_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : GPIO10_Pin GPIO11_Pin GPIO12_Pin GPIO15__Pin
-                           GPIO16__Pin */
-  GPIO_InitStruct.Pin = GPIO10_Pin|GPIO11_Pin|GPIO12_Pin|GPIO15__Pin
-                          |GPIO16__Pin;
+  /*Configure GPIO pins : GPIO12_Pin GPIO13_Pin GPIO14_Pin GPIO17__Pin
+                           GPIO18__Pin */
+  GPIO_InitStruct.Pin = GPIO12_Pin|GPIO13_Pin|GPIO14_Pin|GPIO17__Pin
+                          |GPIO18__Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : GPIO13_Pin GPIO14_Pin */
-  GPIO_InitStruct.Pin = GPIO13_Pin|GPIO14_Pin;
+  /*Configure GPIO pins : GPIO15_Pin GPIO16_Pin GPIO6_Pin GPIO7_Pin */
+  GPIO_InitStruct.Pin = GPIO15_Pin|GPIO16_Pin|GPIO6_Pin|GPIO7_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : GPIO17__Pin GPIO18__Pin CS2_Pin GPIO7_Pin
-                           GPIO8_Pin GPIO9_Pin */
-  GPIO_InitStruct.Pin = GPIO17__Pin|GPIO18__Pin|CS2_Pin|GPIO7_Pin
-                          |GPIO8_Pin|GPIO9_Pin;
+  /*Configure GPIO pins : GPIO19__Pin GPIO20__Pin CS2_Pin GPIO9_Pin
+                           GPIO10_Pin GPIO11_Pin */
+  GPIO_InitStruct.Pin = GPIO19__Pin|GPIO20__Pin|CS2_Pin|GPIO9_Pin
+                          |GPIO10_Pin|GPIO11_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
