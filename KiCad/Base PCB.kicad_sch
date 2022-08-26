@@ -1856,7 +1856,7 @@
   (symbol (lib_id "Device:Jumper_NO_Small") (at 50.8 172.72 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000061abb3ca)
-    (property "Reference" "JP2" (id 0) (at 52.0192 171.5516 90)
+    (property "Reference" "JP4" (id 0) (at 52.0192 171.5516 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "GND Jumper" (id 1) (at 52.0192 173.863 90)
