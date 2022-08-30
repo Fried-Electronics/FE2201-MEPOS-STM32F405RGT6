@@ -6,8 +6,8 @@
 
   (title_block
     (title "STM32F405RGT6")
-    (date "2022-05-23")
-    (rev "V22.05.0.1")
+    (date "2022-08-30")
+    (rev "V22.08.0.1")
   )
 
   (lib_symbols
@@ -3326,7 +3326,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 4de76fae-c0c6-4c8c-9c29-fe87dd9e7a27)
   )
-  (text "STM32F405RGT6 V22.05.0.1" (at 25.4 25.4 0)
+  (text "STM32F405RGT6 V22.08.0.1" (at 25.4 25.4 0)
     (effects (font (size 5.0038 5.0038) (thickness 1.0008) bold) (justify left bottom))
     (uuid 628c4597-f04c-46f8-9d95-b3d6d05094a7)
   )
