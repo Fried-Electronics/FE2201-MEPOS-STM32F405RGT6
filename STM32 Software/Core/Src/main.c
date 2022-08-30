@@ -61,10 +61,12 @@ UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart3;
 
 /* USER CODE BEGIN PV */
-extern uint8_t UserRxBufferHS[APP_RX_DATA_SIZE];
-extern uint8_t UserTxBufferHS[APP_TX_DATA_SIZE];
-uint16_t HeadRxBufferHS = 0;
-uint16_t TailRxBufferHS = 0;
+/*			USB CDC Variables Start			*/
+extern uint8_t UserRxBufferHS[APP_RX_DATA_SIZE];	// Rx buffer from usbd_cdc_if.c
+extern uint8_t UserTxBufferHS[APP_TX_DATA_SIZE];	// Tx buffer from usbd_cdc_if.c
+uint16_t HeadRxBufferHS = 0;						// Head of the Rx buffer
+uint16_t TailRxBufferHS = 0;						// Tail of the Rx buffer
+/*			USB CDC Variables End			*/
 
 /* USER CODE END PV */
 
