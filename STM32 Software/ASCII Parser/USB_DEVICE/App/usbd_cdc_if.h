@@ -108,6 +108,8 @@ extern USBD_CDC_ItfTypeDef USBD_Interface_fops_HS;
 uint8_t CDC_Transmit_HS(uint8_t* Buf, uint16_t Len);
 
 /* USER CODE BEGIN EXPORTED_FUNCTIONS */
+extern uint8_t UserRxBufferHS[APP_RX_DATA_SIZE];	// Rx buffer from usbd_cdc_if.c
+extern uint8_t UserTxBufferHS[APP_TX_DATA_SIZE];	// Tx buffer from usbd_cdc_if.c
 
 /* USER CODE END EXPORTED_FUNCTIONS */
 
