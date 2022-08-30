@@ -335,7 +335,7 @@ static void Increment_Head (uint32_t *Length)
 
 }
 
-void Decrament_Tail (uint32_t *Length)
+void Decrement_Tail (uint32_t *Length)
 {
 
 }
