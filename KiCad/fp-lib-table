@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name "MEPOS")(type "KiCad")(uri "${KIPRJMOD}/Libraries/MEPOS.pretty")(options "")(descr ""))
+  (lib (name "STM32F405RGT6")(type "KiCad")(uri "${KIPRJMOD}/Libraries/STM32F405RGT6.pretty")(options "")(descr ""))
 )
