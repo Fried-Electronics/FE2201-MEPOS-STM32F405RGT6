@@ -1,0 +1,62 @@
+### Module positions - created on Tue Aug 30 11:57:13 2022 ###
+### Printed by Pcbnew version (6.0.5)
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref     Val                  Package                                   PosX       PosY       Rot  Side
+C1        100nF                C_0603_1608Metric                     -12.8400   -17.1450  180.0000  top
+C2        100nF                C_0603_1608Metric                       4.4450   -45.8600   90.0000  top
+C3        100nF                C_0603_1608Metric                      22.2250   -45.7200   90.0000  top
+C4        10uF                 C_0603_1608Metric                       7.1250     6.3500    0.0000  top
+C5        10pF                 C_0603_1608Metric                      -7.2950   -13.9700    0.0000  top
+C6        100nF                C_0603_1608Metric                       8.3950    -3.1750    0.0000  top
+C7        10pF                 C_0603_1608Metric                      -3.8400   -13.9700    0.0000  top
+C8        100nF                C_0603_1608Metric                     -25.4000   -24.1300    0.0000  top
+C9        100nF                C_0603_1608Metric                      -7.1250    -5.0800  180.0000  top
+C10       2.2uF                C_0603_1608Metric                       8.3950     3.8100    0.0000  top
+C11       100nF                C_0603_1608Metric                      -5.8550     6.3500  180.0000  top
+C12       10uF                 C_0603_1608Metric                      13.8300    38.5000  180.0000  top
+C13       2.2uF                C_0603_1608Metric                      -5.8550     7.6200  180.0000  top
+C14       100nF                C_0603_1608Metric                       7.1250     5.0800    0.0000  top
+C15       100nF                C_0603_1608Metric                      -5.0800    -7.1250  -90.0000  top
+C16       10uF                 C_0603_1608Metric                      13.8300    40.6400  180.0000  top
+C17       100nF                C_0603_1608Metric                       1.1300    -7.6200  180.0000  top
+C18       1uF                  C_0603_1608Metric                       1.1300    -9.5250  180.0000  top
+D1        SM4007PL             D_SOD-123F                            -28.5750   -25.5300  -90.0000  top
+D2        SK6805               LED_SK6805_PLCC4_2.4x2.7mm_P1.3mm     -26.8250   -21.2250  -90.0000  top
+D3        1N5819WS             D_SOD-323                              18.1950    35.5600    0.0000  top
+D4        KT-0603W             LED_0603_1608Metric                    -5.7150   -43.1800   90.0000  top
+D5        KT-0603W             LED_0603_1608Metric                    -3.1750   -43.1800   90.0000  top
+D6        KT-0603W             LED_0603_1608Metric                    26.6700    38.7350  -90.0000  top
+D7        1N5819WS             D_SOD-323                             -28.5750   -45.7200  -90.0000  top
+D8        1N5819WS             D_SOD-323                              10.7950    41.2600   90.0000  top
+D9        PSM712-LF-T7         SOT-23                                 -1.5240    38.7835  -90.0000  top
+D10       PSM712-LF-T7         SOT-23                                  2.5400    38.7835  -90.0000  top
+F1        500mA                Fuse_1206_3216Metric                   10.7950    36.8300   90.0000  top
+FB1       220R_@100MHz         L_0603_1608Metric                       6.3500     9.0425  -90.0000  top
+FB2       220R_@100MHz         L_0603_1608Metric                       1.9050   -12.0650  -90.0000  top
+FB3       220R_@100MHz         L_0603_1608Metric                       7.6200    42.3100  180.0000  top
+GND1      Scope_GND            Scope_GND                              46.9900    34.2900   90.0000  top
+J1        Programming_Header   PinHeader_2x05_P2.54mm_Vertical       -15.2450   -44.4450  -90.0000  top
+J2        USB_C_2.0            USB_C_Receptacle_HRO_TYPE-C-31-M-12     0.0000    46.9900  180.0000  top
+J3        Conn_02x32_Odd_Even  PinSocket_2x32_P2.54mm_Vertical       -41.9100    39.3700    0.0000  top
+J4        Conn_02x20_Odd_Even  PinSocket_2x20_P2.54mm_Vertical        44.4500     8.8900    0.0000  top
+JP1       BOOT0                PinHeader_1x02_P2.54mm_Vertical        -5.7150   -27.3050    0.0000  top
+R1        10k                  R_0603_1608Metric                      -3.1750   -26.6700   90.0000  top
+R2        10k                  R_0603_1608Metric                      15.8750   -45.7200  -90.0000  top
+R3        10k                  R_0603_1608Metric                      33.6550   -45.7200  -90.0000  top
+R4        5k1                  R_0603_1608Metric                     -18.4150   -25.5900   90.0000  top
+R5        5k1                  R_0603_1608Metric                     -15.8750   -25.5900   90.0000  top
+R6        1k                   R_0603_1608Metric                      -5.7150   -46.9900  -90.0000  top
+R7        1k                   R_0603_1608Metric                      -3.1750   -46.9900  -90.0000  top
+R8        1k                   R_0603_1608Metric                      26.6700    42.5450   90.0000  top
+R9        10k                  R_0603_1608Metric                      16.5100     3.3650   90.0000  top
+R10       5k1                  R_0603_1608Metric                       6.1600    44.8950   90.0000  top
+R11       5k1                  R_0603_1608Metric                      -6.3500    44.8950   90.0000  top
+REF**     Logo                 Logo                                   42.9497    16.0000    0.0000  top
+SW1       TS-1187A             SW_SPST_SKQG_WithStem                  10.1600   -45.7200    0.0000  top
+SW2       TS-1187A             SW_SPST_SKQG_WithStem                  27.9400   -45.7200    0.0000  top
+U1        M24C02-RMN           SOIC-8_3.9x4.9mm_P1.27mm              -15.1750   -20.9550    0.0000  top
+U2        AMS1117-3.3          SOT-223-3_TabPin2                      20.3200    40.6400    0.0000  top
+U3        STM32F405RGTx        LQFP-64_10x10mm_P0.5mm                  0.0000     0.0000   90.0000  top
+Y1        16MHz                Crystal_SMD_3225-4Pin_3.2x2.5mm        -5.8850   -16.5100    0.0000  top
+## End
