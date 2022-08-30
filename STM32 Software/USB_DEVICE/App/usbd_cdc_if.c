@@ -32,6 +32,8 @@
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
 uint8_t LineCodingBuffer[7];
+extern uint16_t HeadRxBufferHS = 0;
+extern uint16_t TailRxBufferHS = 0;
 
 /* USER CODE END PV */
 
@@ -328,6 +330,15 @@ static int8_t CDC_TransmitCplt_HS(uint8_t *Buf, uint32_t *Len, uint8_t epnum)
 }
 
 /* USER CODE BEGIN PRIVATE_FUNCTIONS_IMPLEMENTATION */
+static void Increment_Head (uint32_t *Length)
+{
+
+}
+
+void Decrament_Tail (uint32_t *Length)
+{
+
+}
 
 /* USER CODE END PRIVATE_FUNCTIONS_IMPLEMENTATION */
 
