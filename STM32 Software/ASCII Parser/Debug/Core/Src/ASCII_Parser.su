@@ -1,3 +1,5 @@
-../Core/Src/ASCII_Parser.c:27:6:Increment_Head	16	static
-../Core/Src/ASCII_Parser.c:37:13:Decrement_Tail	16	static
-../Core/Src/ASCII_Parser.c:47:9:Check_Data_Available	16	static
+../Core/Src/ASCII_Parser.c:30:6:Increment_Head	16	static
+../Core/Src/ASCII_Parser.c:40:13:Decrement_Tail	16	static
+../Core/Src/ASCII_Parser.c:50:9:Check_Data_Available	16	static
+../Core/Src/ASCII_Parser.c:68:8:New_Command	88	static
+../Core/Src/ASCII_Parser.c:94:9:Search_Command_Buffer	24	static
