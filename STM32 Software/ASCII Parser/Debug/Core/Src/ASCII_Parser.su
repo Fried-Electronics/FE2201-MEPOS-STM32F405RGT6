@@ -1,0 +1,2 @@
+../Core/Src/ASCII_Parser.c:22:13:Increment_Head	16	static
+../Core/Src/ASCII_Parser.c:27:6:Decrement_Tail	16	static
