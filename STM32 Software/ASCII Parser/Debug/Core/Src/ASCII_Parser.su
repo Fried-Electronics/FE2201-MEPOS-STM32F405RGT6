@@ -1,2 +1,3 @@
-../Core/Src/ASCII_Parser.c:20:6:Increment_Head	16	static
-../Core/Src/ASCII_Parser.c:25:6:Decrement_Tail	16	static
+../Core/Src/ASCII_Parser.c:27:6:Increment_Head	16	static
+../Core/Src/ASCII_Parser.c:37:13:Decrement_Tail	16	static
+../Core/Src/ASCII_Parser.c:47:9:Check_Data_Available	16	static
