@@ -31,6 +31,7 @@
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
+uint8_t LineCodingBuffer[7];
 
 /* USER CODE END PV */
 
@@ -223,11 +224,23 @@ static int8_t CDC_Control_HS(uint8_t cmd, uint8_t* pbuf, uint16_t length)
   /* 6      | bDataBits  |   1   | Number Data bits (5, 6, 7, 8 or 16).          */
   /*******************************************************************************/
   case CDC_SET_LINE_CODING:
-
+  	LineCodingBuffer[0] = pbuf[0];
+  	LineCodingBuffer[1] = pbuf[1];
+  	LineCodingBuffer[2] = pbuf[2];
+  	LineCodingBuffer[3] = pbuf[3];
+  	LineCodingBuffer[4] = pbuf[4];
+  	LineCodingBuffer[5] = pbuf[5];
+  	LineCodingBuffer[6] = pbuf[6];
     break;
 
   case CDC_GET_LINE_CODING:
-
+  	pbuf[0] = LineCodingBuffer[0];
+  	pbuf[1] = LineCodingBuffer[1];
+  	pbuf[2] = LineCodingBuffer[2];
+  	pbuf[3] = LineCodingBuffer[3];
+  	pbuf[4] = LineCodingBuffer[4];
+  	pbuf[5] = LineCodingBuffer[5];
+  	pbuf[6] = LineCodingBuffer[6];
     break;
 
   case CDC_SET_CONTROL_LINE_STATE:
