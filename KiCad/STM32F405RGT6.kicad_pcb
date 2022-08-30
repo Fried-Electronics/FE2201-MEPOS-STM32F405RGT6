@@ -6,9 +6,9 @@
 
   (paper "A4")
   (title_block
-    (title "MEPOS Template")
+    (title "STM32F405RGT6")
     (date "2022-08-30")
-    (rev "V22.04.0.5")
+    (rev "V22.08.0.1")
   )
 
   (layers
