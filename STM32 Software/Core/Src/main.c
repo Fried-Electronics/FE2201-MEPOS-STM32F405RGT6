@@ -61,6 +61,10 @@ UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart3;
 
 /* USER CODE BEGIN PV */
+extern uint8_t UserRxBufferHS[APP_RX_DATA_SIZE];
+extern uint8_t UserTxBufferHS[APP_TX_DATA_SIZE];
+uint16_t HeadRxBufferHS = 0;
+uint16_t TailRxBufferHS = 0;
 
 /* USER CODE END PV */
 
