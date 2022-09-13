@@ -22,7 +22,6 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "usbd_cdc_if.h"
 
 /* USER CODE END Includes */
 
@@ -80,7 +79,6 @@ static void MX_CAN2_Init(void);
 static void MX_TIM8_Init(void);
 static void MX_SPI1_Init(void);
 /* USER CODE BEGIN PFP */
-static uint8_t Check_Head (void);
 
 /* USER CODE END PFP */
 
