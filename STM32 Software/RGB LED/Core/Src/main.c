@@ -21,7 +21,6 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "usbd_cdc_if.h"
 
 /* USER CODE END Includes */
 
@@ -53,7 +52,6 @@ static void MX_GPIO_Init(void);
 static void MX_DMA_Init(void);
 static void MX_TIM3_Init(void);
 /* USER CODE BEGIN PFP */
-static uint8_t Check_Head (void);
 
 /* USER CODE END PFP */
 
