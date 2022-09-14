@@ -37,11 +37,11 @@ typedef enum _Standard_Colours
 } Standard_Colours;
 
 /*			Exported Functions			*/
+void RGB_LED_Init (TIM_HandleTypeDef *htim, uint8_t TIM_CHANNEL);
 void Set_Standard_Colour (uint8_t LED_Index, Standard_Colours Colour, uint8_t Brightness);
 void Update_All_PWM_Buffer (void);
-void RGB_LED_Init (TIM_HandleTypeDef *htim, uint8_t TIM_CHANNEL);
+void Rainbow(uint8_t Step_Size);
 
 /*			Exported Variables			*/
-//extern uint32_t PWM_Buffer[PWM_BUFFER_LENGTH];
 
 #endif /* INC_RGB_LED_H_ */

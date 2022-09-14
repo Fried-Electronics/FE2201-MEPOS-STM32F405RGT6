@@ -93,14 +93,11 @@ int main(void)
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
   RGB_LED_Init(&htim3, TIM_CHANNEL_3);
-  HAL_Delay(1000);
+  Set_Standard_Colour(0, Red, 255);
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
-  //Set_Standard_Colour(0, Red, 255);
-  //HAL_TIM_PWM_Start_DMA(&htim3, TIM_CHANNEL_3, (uint32_t*)PWM_Buffer, PWM_BUFFER_LENGTH);
 
   while (1)
   {
@@ -108,8 +105,8 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 	  HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
-	  Set_Standard_Colour(0, Green, 255);
-	  Update_All_PWM_Buffer();
+	  Rainbow(10);
+	  HAL_Delay(10);
   }
   /* USER CODE END 3 */
 }

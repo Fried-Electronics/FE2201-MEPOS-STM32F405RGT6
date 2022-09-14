@@ -73,7 +73,7 @@ void Update_All_PWM_Buffer (void)
 {
 	for (int ledIndex = 0; ledIndex < NUMBER_OF_LEDS; ledIndex++)
 	{
-		for (int bitIndex = 7; bitIndex > -1; bitIndex--)
+		for (int bitIndex = 0; bitIndex < 8; bitIndex++)
 		{
 			uint8_t greenValue = LOW_LEVEL;
 			uint8_t redValue = LOW_LEVEL;
@@ -92,13 +92,65 @@ void Update_All_PWM_Buffer (void)
 				blueValue = HIGH_LEVEL;
 			}
 
-			PWM_Buffer[(ledIndex * NUMBER_OF_BITS) + bitIndex] = greenValue;
-			PWM_Buffer[(ledIndex * NUMBER_OF_BITS) + bitIndex + 8] = redValue;
-			PWM_Buffer[(ledIndex * NUMBER_OF_BITS) + bitIndex + 16] = blueValue;
+			PWM_Buffer[(ledIndex * NUMBER_OF_BITS) + (7-bitIndex)] = greenValue;
+			PWM_Buffer[(ledIndex * NUMBER_OF_BITS) + (7-bitIndex) + 8] = redValue;
+			PWM_Buffer[(ledIndex * NUMBER_OF_BITS) + (7-bitIndex) + 16] = blueValue;
 		}
 	}
 
 	HAL_TIM_PWM_Start_DMA(RGB_LED_Timer, RGB_LED_Timer_Channel, PWM_Buffer, PWM_BUFFER_LENGTH);
+}
+
+void Rainbow (uint8_t Step_Size)
+{
+	static int16_t red = 0, green = 90, blue = 180;
+	static int8_t redDirection = 1, greenDirection = 1, blueDirection = 1;
+	uint8_t stepSize = Step_Size;
+	uint8_t ledStepSize = 0;
+
+	for (int ledIndex = 0; ledIndex < NUMBER_OF_LEDS; ledIndex++)
+	{
+		red += (redDirection * stepSize);
+		green += (greenDirection * stepSize);
+		blue += (blueDirection * stepSize);
+
+		if (red > 255)
+		{
+			red = (255 - (red - 255));
+			redDirection *= -1;
+		}
+		if (green > 255)
+		{
+			green = (255 - (green - 255));
+			greenDirection *= -1;
+		}
+		if (blue > 255)
+		{
+			blue = (255 - (blue - 255));
+			blueDirection *= -1;
+		}
+
+		if (red < 0)
+		{
+			red = (red * -1);
+			redDirection *= -1;
+		}
+		if (green < 0)
+		{
+			green = (green * -1);
+			greenDirection *= -1;
+		}
+		if (blue < 0)
+		{
+			blue = (blue * -1);
+			blueDirection *= -1;
+		}
+
+		LED_Buffer[ledIndex].Red = (red + ledStepSize);
+		LED_Buffer[ledIndex].Green = (green + ledStepSize);
+		LED_Buffer[ledIndex].Blue = (blue + ledStepSize);
+	}
+	Update_All_PWM_Buffer();
 }
 
 void HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef *htim)
