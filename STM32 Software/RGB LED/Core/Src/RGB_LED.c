@@ -61,9 +61,9 @@ void Set_Standard_Colour (uint8_t LED_Index, Standard_Colours Colour, uint8_t Br
 			break;
 	}
 
-	led.Red = (led.Red * (Brightness / 255));
-	led.Green = (led.Green * (Brightness / 255));
-	led.Blue = (led.Blue * (Brightness / 255));
+	led.Red = (led.Red * ((Brightness * 255) / 100));
+	led.Green = (led.Green * ((Brightness * 255) / 100));
+	led.Blue = (led.Blue * ((Brightness * 255) / 100));
 
 	LED_Buffer[LED_Index] = led;
 	Update_All_PWM_Buffer();
@@ -98,12 +98,12 @@ void Update_All_PWM_Buffer (void)
 		}
 	}
 
-	HAL_TIM_PWM_Start_DMA(RGB_LED_Timer, RGB_LED_Timer_Channel, PWM_Buffer, PWM_BUFFER_LENGTH);
+	HAL_TIM_PWM_Start_DMA(RGB_LED_Timer, RGB_LED_Timer_Channel, (uint32_t*)PWM_Buffer, PWM_BUFFER_LENGTH);
 }
 
 void Rainbow (uint8_t Step_Size)
 {
-	static int16_t red = 0, green = 90, blue = 180;
+	static int16_t red = 0, green = 85, blue = 170;
 	static int8_t redDirection = 1, greenDirection = 1, blueDirection = 1;
 	uint8_t stepSize = Step_Size;
 	uint8_t ledStepSize = 0;
