@@ -418,7 +418,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "STM32F405RGT6.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
