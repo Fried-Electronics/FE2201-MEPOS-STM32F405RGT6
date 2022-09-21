@@ -546,7 +546,7 @@
       (net 108 "+3V3") (pinfunction "Pin_63") (pintype "passive") (tstamp 99a27256-a88a-4355-b453-612ad2615aaf))
     (pad "64" thru_hole oval locked (at -2.54 78.74) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 1 "GND") (pinfunction "Pin_64") (pintype "passive") (tstamp 21f7e9f1-0a4c-49be-a4ca-8c8253ab27e6))
-    (model "${KICAD6_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_2x32_P2.54mm_Vertical.wrl"
+    (model "${KICAD6_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_2x32_P2.54mm_Vertical.step"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -671,7 +671,7 @@
       (net 1 "GND") (pinfunction "Pin_39") (pintype "passive") (tstamp bb94c706-c1c6-4e19-ac2a-271d09f29af0))
     (pad "40" thru_hole oval locked (at -2.54 48.26) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 53 "-5VA") (pinfunction "Pin_40") (pintype "passive") (tstamp 20f86032-2ca7-4d85-9342-2ec7dd95b228))
-    (model "${KICAD6_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_2x20_P2.54mm_Vertical.wrl"
+    (model "${KICAD6_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_2x20_P2.54mm_Vertical.step"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -828,7 +828,7 @@
       (net 110 "Net-(D4-Pad1)") (pinfunction "K") (pintype "passive") (tstamp 358f3a2f-6a64-4a8e-b2bf-1dbfcfedb21c))
     (pad "2" smd roundrect locked (at 0.7875 0 90) (size 0.875 0.95) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
       (net 108 "+3V3") (pinfunction "A") (pintype "passive") (tstamp 26621835-7ca4-4f37-89b9-22efd3b575ab))
-    (model "${KICAD6_3DMODEL_DIR}/LED_SMD.3dshapes/LED_0603_1608Metric.wrl"
+    (model "${KICAD6_3DMODEL_DIR}/LED_SMD.3dshapes/LED_0603_1608Metric.step"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1289,7 +1289,7 @@
       (net 112 "Net-(D6-Pad1)") (pinfunction "K") (pintype "passive") (tstamp 93d62d2d-c8dc-4863-9f90-25a98433b175))
     (pad "2" smd roundrect locked (at 0.7875 0 90) (size 0.875 0.95) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
       (net 108 "+3V3") (pinfunction "A") (pintype "passive") (tstamp 6be3501b-5fd5-4e9a-bc27-ffb20b48b718))
-    (model "${KICAD6_3DMODEL_DIR}/LED_SMD.3dshapes/LED_0603_1608Metric.wrl"
+    (model "${KICAD6_3DMODEL_DIR}/LED_SMD.3dshapes/LED_0603_1608Metric.step"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2050,7 +2050,7 @@
       (net 110 "Net-(D4-Pad1)") (pintype "passive") (tstamp 1876f6b8-359b-477f-abdc-34fb2d5f5494))
     (pad "2" smd roundrect locked (at 0.825 0 270) (size 0.8 0.95) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
       (net 19 "GPIO17~") (pintype "passive") (tstamp c13429f1-a1a2-4fea-b8cd-2e0123d82efb))
-    (model "${KICAD6_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl"
+    (model "${KICAD6_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -5085,7 +5085,7 @@
       (net 112 "Net-(D6-Pad1)") (pintype "passive") (tstamp 361399fb-ef2c-4f4e-a29f-f1b6f422b7f1))
     (pad "2" smd roundrect locked (at 0.825 0 270) (size 0.8 0.95) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
       (net 30 "GPIO18~") (pintype "passive") (tstamp d14164c3-01a4-431f-8c4f-69e5611e15b4))
-    (model "${KICAD6_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl"
+    (model "${KICAD6_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -8155,7 +8155,7 @@
       (net 1 "GND") (pinfunction "VSS") (pintype "power_in") (tstamp 6cb976c4-268a-4aef-8409-ad204ec8af6f))
     (pad "64" smd roundrect locked (at -3.75 -5.675 90) (size 0.3 1.55) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
       (net 101 "/VDD_Decoupling") (pinfunction "VDD") (pintype "power_in") (tstamp 9c0cc009-be8f-429c-af90-9b67ce84be69))
-    (model "${KICAD6_3DMODEL_DIR}/Package_QFP.3dshapes/LQFP-64_10x10mm_P0.5mm.wrl"
+    (model "${KICAD6_3DMODEL_DIR}/Package_QFP.3dshapes/LQFP-64_10x10mm_P0.5mm.step"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))

@@ -417,7 +417,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "specctra_dsn": "",
+      "specctra_dsn": "3D Models/STM32F405RGT6.dsn",
       "step": "STM32F405RGT6.step",
       "vrml": ""
     },
