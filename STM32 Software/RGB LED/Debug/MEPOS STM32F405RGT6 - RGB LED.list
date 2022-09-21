@@ -710,7 +710,7 @@ void Rainbow (uint8_t Step_Size)
  800070c:	af00      	add	r7, sp, #0
  800070e:	4603      	mov	r3, r0
  8000710:	71fb      	strb	r3, [r7, #7]
-	static int16_t red = 0, green = 85, blue = 170;
+	static int16_t red = 0, green = 180, blue = 360;
 	static int8_t redDirection = 1, greenDirection = 1, blueDirection = 1;
 	uint8_t stepSize = Step_Size;
  8000712:	79fb      	ldrb	r3, [r7, #7]

@@ -103,7 +103,7 @@ void Update_All_PWM_Buffer (void)
 
 void Rainbow (uint8_t Step_Size)
 {
-	static int16_t red = 0, green = 85, blue = 170;
+	static int16_t red = 0, green = 180, blue = 360;
 	static int8_t redDirection = 1, greenDirection = 1, blueDirection = 1;
 	uint8_t stepSize = Step_Size;
 	uint8_t ledStepSize = 0;
