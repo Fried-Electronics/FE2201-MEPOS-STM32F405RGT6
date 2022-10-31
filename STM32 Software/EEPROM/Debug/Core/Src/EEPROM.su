@@ -1,0 +1,6 @@
+../Core/Src/EEPROM.c:22:16:Calculate_Memory_Address	16	static
+../Core/Src/EEPROM.c:31:6:Init_EEPROM	16	static
+../Core/Src/EEPROM.c:37:19:Byte_Write	40	static
+../Core/Src/EEPROM.c:51:19:Word_Write	16	static
+../Core/Src/EEPROM.c:58:9:Byte_Read	40	static
+../Core/Src/EEPROM.c:74:10:Word_Read	24	static
