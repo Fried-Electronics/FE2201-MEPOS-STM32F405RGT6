@@ -95,9 +95,13 @@ int main(void)
   /* USER CODE BEGIN 2 */
   Init_EEPROM(&hi2c1, 0x00);
 
-  //Byte_Write(0, 69);
+  Byte_Write(0, 12);
+  Byte_Write(1, 13);
+  Byte_Write(2, 14);
 
-  uint8_t value = Byte_Read(0);
+  uint8_t value0 = Byte_Read(0);
+  uint8_t value1 = Byte_Read(1);
+  uint8_t value2 = Byte_Read(2);
 
   /* USER CODE END 2 */
 
@@ -169,7 +173,7 @@ static void MX_I2C1_Init(void)
 
   /* USER CODE END I2C1_Init 1 */
   hi2c1.Instance = I2C1;
-  hi2c1.Init.ClockSpeed = 400000;
+  hi2c1.Init.ClockSpeed = 100000;
   hi2c1.Init.DutyCycle = I2C_DUTYCYCLE_2;
   hi2c1.Init.OwnAddress1 = 0;
   hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
