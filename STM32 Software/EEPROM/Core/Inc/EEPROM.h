@@ -16,10 +16,12 @@
 
 void Init_EEPROM (I2C_HandleTypeDef *I2C_Handle, uint8_t I2C_Addr);
 
+HAL_StatusTypeDef Write_all (uint8_t Byte);
+
 HAL_StatusTypeDef Byte_Write (uint16_t Address, uint8_t *pByte);
 HAL_StatusTypeDef Page_Write (uint16_t Page_Number, uint8_t *pPage);
 
 HAL_StatusTypeDef Byte_Read (uint16_t Address, uint8_t *pByte);
-HAL_StatusTypeDef Page_read (uint16_t Page_Number, uint8_t *pPage);
+HAL_StatusTypeDef Page_Read (uint16_t Page_Number, uint8_t *pPage);
 
 #endif /* INC_EEPROM_H_ */

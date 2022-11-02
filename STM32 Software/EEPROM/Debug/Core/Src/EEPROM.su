@@ -1,6 +1,7 @@
 ../Core/Src/EEPROM.c:26:10:Calculate_Checksum	16	static
 ../Core/Src/EEPROM.c:33:6:Init_EEPROM	16	static
-../Core/Src/EEPROM.c:43:19:Byte_Write	32	static
-../Core/Src/EEPROM.c:54:19:Page_Write	32	static
-../Core/Src/EEPROM.c:66:19:Byte_Read	32	static
-../Core/Src/EEPROM.c:77:19:Page_read	32	static
+../Core/Src/EEPROM.c:43:19:Write_all	56	static
+../Core/Src/EEPROM.c:59:19:Byte_Write	32	static
+../Core/Src/EEPROM.c:70:19:Page_Write	32	static
+../Core/Src/EEPROM.c:82:19:Byte_Read	32	static
+../Core/Src/EEPROM.c:93:19:Page_Read	32	static

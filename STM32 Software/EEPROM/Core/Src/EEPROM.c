@@ -40,9 +40,25 @@ void Init_EEPROM (I2C_HandleTypeDef *I2C_Handle, uint8_t I2C_Addr)
 	EEPROM.Read_Address = ((0xA0 | I2C_Addr) | 0x0001);
 }
 
+HAL_StatusTypeDef Write_all (uint8_t Byte)
+{
+	uint8_t data[BYTES_PER_PAGE];
+	for (int i = 0; i < BYTES_PER_PAGE; i++)
+	{
+		data[i] = Byte;
+	}
+
+	for (int i = 0; i < NUMBER_OF_PAGES; i++)
+	{
+		Page_Write(i, &data[0]);
+	}
+
+	return HAL_OK;
+}
+
 HAL_StatusTypeDef Byte_Write (uint16_t Address, uint8_t *pByte)
 {
-	if (Address > EEPROM_SIZE)
+	if (Address >= EEPROM_SIZE)
 	{
 		return HAL_ERROR;
 	}
@@ -53,7 +69,7 @@ HAL_StatusTypeDef Byte_Write (uint16_t Address, uint8_t *pByte)
 
 HAL_StatusTypeDef Page_Write (uint16_t Page_Number, uint8_t *pPage)
 {
-	if (Page_Number > NUMBER_OF_PAGES)
+	if (Page_Number >= NUMBER_OF_PAGES)
 	{
 		return HAL_ERROR;
 	}
@@ -65,7 +81,7 @@ HAL_StatusTypeDef Page_Write (uint16_t Page_Number, uint8_t *pPage)
 
 HAL_StatusTypeDef Byte_Read (uint16_t Address, uint8_t *pByte)
 {
-	if (Address > EEPROM_SIZE)
+	if (Address >= EEPROM_SIZE)
 	{
 		return HAL_ERROR;
 	}
@@ -74,9 +90,9 @@ HAL_StatusTypeDef Byte_Read (uint16_t Address, uint8_t *pByte)
 	return HAL_I2C_Mem_Read(EEPROM.I2C_Handle, EEPROM.Read_Address, Address, 2, pByte, 1, HAL_MAX_DELAY);
 }
 
-HAL_StatusTypeDef Page_read (uint16_t Page_Number, uint8_t *pPage)
+HAL_StatusTypeDef Page_Read (uint16_t Page_Number, uint8_t *pPage)
 {
-	if (Page_Number > NUMBER_OF_PAGES)
+	if (Page_Number >= NUMBER_OF_PAGES)
 	{
 		return HAL_ERROR;
 	}
