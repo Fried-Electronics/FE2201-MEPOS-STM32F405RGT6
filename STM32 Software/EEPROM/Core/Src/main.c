@@ -95,19 +95,19 @@ int main(void)
   /* USER CODE BEGIN 2 */
   Init_EEPROM(&hi2c1, 0x00);
 
-  uint8_t byte = 0;
-
-  byte = 1;
-  Byte_Write(0, &byte);
-  byte = 2;
-  Byte_Write(1, &byte);
-  byte = 3;
-  Byte_Write(2, &byte);
+  uint8_t byte[BYTES_PER_PAGE];
+  byte[0] = 1;
+  Byte_Write(0, &byte[0]);
+  byte[1] = 2;
+  Byte_Write(1, &byte[1]);
+  byte[2] = 3;
+  Byte_Write(2, &byte[2]);
 
   uint8_t value0 = 0, value1 = 0, value2 = 0;
   Byte_Read(0, &value0);
   Byte_Read(1, &value1);
   Byte_Read(2, &value2);
+  Page_read(0, &byte[3]);
 
   /* USER CODE END 2 */
 

@@ -51,14 +51,16 @@ HAL_StatusTypeDef Byte_Write (uint16_t Address, uint8_t *pByte)
 	return HAL_I2C_Mem_Write(EEPROM.I2C_Handle, EEPROM.Write_Address, Address, 2, pByte, 1, HAL_MAX_DELAY);
 }
 
-HAL_StatusTypeDef Page_Write (uint16_t Page_Number, uint8_t *Data)
+HAL_StatusTypeDef Page_Write (uint16_t Page_Number, uint8_t *pPage)
 {
 	if (Page_Number > NUMBER_OF_PAGES)
 	{
 		return HAL_ERROR;
 	}
 
-	return HAL_OK;
+	HAL_Delay(5);
+	return HAL_I2C_Mem_Write(EEPROM.I2C_Handle, EEPROM.Write_Address, (Page_Number * BYTES_PER_PAGE),
+								2, pPage, BYTES_PER_PAGE, HAL_MAX_DELAY);
 }
 
 HAL_StatusTypeDef Byte_Read (uint16_t Address, uint8_t *pByte)
@@ -79,7 +81,9 @@ HAL_StatusTypeDef Page_read (uint16_t Page_Number, uint8_t *pPage)
 		return HAL_ERROR;
 	}
 
-	return HAL_OK;
+	HAL_Delay(5);
+	return HAL_I2C_Mem_Read(EEPROM.I2C_Handle, EEPROM.Write_Address, (Page_Number * BYTES_PER_PAGE),
+								2, pPage, BYTES_PER_PAGE, HAL_MAX_DELAY);
 }
 
 
