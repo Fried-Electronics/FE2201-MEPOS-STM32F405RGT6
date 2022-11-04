@@ -95,15 +95,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   Init_EEPROM(&hi2c1, 0x00);
 
-  uint8_t txData[BYTES_PER_PAGE] = {1,2,4,76,31};
-  uint8_t rxData[BYTES_PER_PAGE] = {0,0,0,0,0};
-
-  //Page_Write(0, &txData[0]);
-
-  Write_all(54);
-
-  Page_Read(0, &rxData[0]);
-  Page_Read(249, &rxData[0]);
+  Set_Serial_Number(1);			// Temporary should be called once for setup
 
   /* USER CODE END 2 */
 
@@ -111,6 +103,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  Update_On_Time();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -175,7 +168,7 @@ static void MX_I2C1_Init(void)
 
   /* USER CODE END I2C1_Init 1 */
   hi2c1.Instance = I2C1;
-  hi2c1.Init.ClockSpeed = 100000;
+  hi2c1.Init.ClockSpeed = 400000;
   hi2c1.Init.DutyCycle = I2C_DUTYCYCLE_2;
   hi2c1.Init.OwnAddress1 = 0;
   hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
